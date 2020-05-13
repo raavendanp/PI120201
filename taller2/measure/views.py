@@ -12,7 +12,7 @@ def measure(request):
         # Verifica si el value no esta vacio
         if value:
             # Crea el json para realizar la petición POST al Web Service
-            args = {'type': 'Humedad de Aire (%)', 'value': value}
+            args = {'type': 'Humedad de Aire (%)', 'value': value }
             response = requests.post('http://127.0.0.1:8000/measures/', args)
             # Convierte la respuesta en JSON
             measure_json = response.json()
