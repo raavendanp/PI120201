@@ -16,7 +16,11 @@ def measure(request):
         # Verifica si el Longitud no esta vacio
         if Longitud and Codigo and Latitud and Area:
             # Crea el json para realizar la petición POST al Web Service
+<<<<<<< HEAD
             args = {'Codigo': Codigo, 'Longitud': Longitud, 'Latitud': Latitud, 'Producto':Producto, 'Area': Area}
+=======
+            args = {'type': 'Humedad de Aire (%)', 'value': value }
+>>>>>>> b083b93caf2047ef40268bcfe35e7783cb862f97
             response = requests.post('http://127.0.0.1:8000/measures/', args)
             # Convierte la respuesta en JSON
             measure_json = response.json()
