@@ -77,10 +77,14 @@ WSGI_APPLICATION = 'proyectointegrador1.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+         'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'p1-bd',
+        'USER': 'root', #Mysql username
+        'PASSWORD': '1234', #mysql password
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        
+         }
 }
 
 

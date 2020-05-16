@@ -24,5 +24,5 @@ router.register(r'measures', views.MeasureViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
-    path('admin/', admin.site.urls),
+   # path('admin/', admin.site.urls),
 ]
