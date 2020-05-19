@@ -80,10 +80,10 @@ DATABASES = {
      'default': {
 
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'p1-bd',
-        'USER': 'root', #Mysql username
-        'PASSWORD': '1234', #mysql password
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on        
+        'NAME': 'evergreen',
+        'USER': 'raavendanp@evergreenadmin', #Mysql username
+        'PASSWORD': 'Eafit2017*', #mysql password
+        'HOST': 'evergreenadmin.mysql.database.azure.com',   # Or an IP Address that your DB is hosted on        
          }
 }
 
