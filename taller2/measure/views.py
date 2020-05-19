@@ -6,13 +6,17 @@ def home(request):
     return render(request, "measure/home.html")
 
 def measure(request):
-    # Verifica si hay un parametro value en la petición GET
-    if 'value' in request.GET:
-        value = request.GET['value']
-        # Verifica si el value no esta vacio
-        if value:
+    # Verifica si hay un parametro Longitud en la petición GET
+    if 'Longitud' and 'Codigo' and 'Latitud' and 'Producto' and 'Area' in request.GET:
+        Longitud = request.GET['Longitud']
+        Latitud = request.GET['Latitud']
+        Codigo = request.GET['Codigo']
+        Producto = request.GET['Producto']
+        Area = request.GET['Area']
+        # Verifica si el Longitud no esta vacio
+        if Longitud and Codigo and Latitud and Area:
             # Crea el json para realizar la petición POST al Web Service
-            args = {'type': 'Humedad de Aire (%)', 'value': value}
+            args = {'Codigo': Codigo, 'Longitud': Longitud, 'Latitud': Latitud, 'Producto':Producto, 'Area': Area}
             response = requests.post('http://127.0.0.1:8000/measures/', args)
             # Convierte la respuesta en JSON
             measure_json = response.json()
